@@ -8,11 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Map Stuffs</h3>
 
+  <h3>Ionic GoogleMaps Demo</h3>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  This is a demo application of <b>@ionic-native/google-maps</b> plugin.
   </p>
+  <div id="map_canvas">
+    <button ion-button (click)="onButtonClick($event)">Demo</button>
+  </div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

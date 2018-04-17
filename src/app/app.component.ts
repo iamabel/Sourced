@@ -16,7 +16,7 @@ import { MapPage } from '../pages/explore/explore';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any;
 
   pages: Array<{title: string, component: any}>;
 
@@ -35,6 +35,7 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.rootPage = LoginPage;
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
