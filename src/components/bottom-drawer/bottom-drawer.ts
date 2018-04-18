@@ -9,7 +9,7 @@ export class BottomDrawer {
   handleHeight: number = 75;
   bounceBack: boolean = true;
   thresholdTop: number = 200;
-  thresholdBottom: number = 200;
+  thresholdBottom: number = 400;
 
   constructor(public element: ElementRef, public renderer: Renderer,
               public domCtrl: DomController, public platform: Platform) {
@@ -49,7 +49,7 @@ export class BottomDrawer {
 
       this.domCtrl.write(() => {
         this.renderer.setElementStyle(this.element.nativeElement, 'transition', 'top 0.5s');
-        this.renderer.setElementStyle(this.element.nativeElement, 'top', this.platform.height()*.2);
+        this.renderer.setElementStyle(this.element.nativeElement, 'top', (this.platform.height()*.2).toString());
       });
 
     } else if(((this.platform.height() - newTop) < this.thresholdBottom && ev.additionalEvent === "pandown") || bounceToBottom){
