@@ -11,7 +11,8 @@ export class MapPage {
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+  }
 
   ngAfterViewInit() {
     this.initMap();
