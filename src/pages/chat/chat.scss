@@ -1,3 +1,73 @@
 chat-page {
 
 }
+
+.search{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 35px;
+  background-color: lightgrey;
+  width: 97%
+}
+
+.chat p{
+  margin: 0px;
+}
+
+.chat {
+  padding-top: 20px;
+  height: 100px;
+  border-bottom: 1px solid black;
+}
+
+.chat-preview{
+  margin: 0;
+  display: inline-block;
+  width: 65%;
+}
+
+.name{
+  margin: 0;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.chat_block{
+  display: block;
+  height: 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.chatimg{
+  display: inline-block;
+  width: 18%;
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+}
+
+.time{
+  display: inline-block;
+  width: 12%;
+
+}
+
+.time-num{
+  font-size: .7em;
+  text-align: center;
+}
+
+.round {
+  max-width: 50px;
+  border-radius: 45%;
+}
+
+
+$searchbar-ios-toolbar-input-background: red;
