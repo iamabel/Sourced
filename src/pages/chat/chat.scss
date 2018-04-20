@@ -14,17 +14,13 @@ input {
   width: 97%
 }
 
-
-
-
 .chat p{
   margin: 0px;
 }
 
 .chat {
   padding-top: 20px;
-  max-height: 20%;
-  height: 16%;
+  height: 100px;
   border-bottom: 1px solid black;
 }
 
@@ -39,6 +35,14 @@ input {
   margin-bottom: 0;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+.chat_block{
+  display: block;
+  height: 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .chatimg{
@@ -61,6 +65,9 @@ input {
 }
 
 .round {
-  //margin-top: 10px;
+  max-width: 50px;
   border-radius: 45%;
 }
+
+
+$searchbar-ios-toolbar-input-background: red;
