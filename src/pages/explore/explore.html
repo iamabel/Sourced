@@ -17,8 +17,10 @@
 
 </ion-content>
 
-<bottom-drawer>
+<bottom-drawer #drawer>
     <div class="content">
-      Put search results here...!
+      <button ion-item *ngFor="let place of places">
+        {{place.name}}
+      </button>
     </div>
 </bottom-drawer>
