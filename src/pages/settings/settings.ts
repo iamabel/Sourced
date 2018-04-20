@@ -8,7 +8,8 @@ import { NavController, NavParams } from 'ionic-angular';
 export class SettingsPage {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  //items: Array<{title: string, note: string, icon: string}>;
+  items: Array<{title: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -19,19 +20,44 @@ export class SettingsPage {
     'american-football', 'boat', 'bluetooth', 'build'];
 
     this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+    // for (let i = 1; i < 11; i++) {
+    //   this.items.push({
+    //     title: 'Item ' + i,
+    //     note: 'This is item #' + i,
+    //     icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+    //   });
+    // }
+
+    this.items.push({
+      title: 'General'
+    });
+
+    this.items.push({
+      title: 'Privacy'
+    });
+
+    this.items.push({
+      title: 'Location'
+    });
+
+    this.items.push({
+      title: 'Notifications'
+    });
+
+    this.items.push({
+      title: 'Change Password'
+    });
+
+    this.items.push({
+      title: 'Sign Out'
+    });
+
   }
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(SettingsPage, {
-      item: item
-    });
+    // this.navCtrl.push(SettingsPage, {
+    //   item: item
+    // });
   }
 }
