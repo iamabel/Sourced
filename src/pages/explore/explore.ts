@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild } from "@angular/core/";
-import { GoogleMaps, GoogleMap } from '@ionic-native/google-maps';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import {BottomDrawer} from '../../components/bottom-drawer/bottom-drawer';
+import {AutoDropdown} from '../../components/auto-dropdown/auto-dropdown';
 
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 declare var google: any;
 
@@ -15,16 +16,20 @@ declare var google: any;
 export class MapPage {
   @ViewChild('map') mapElement: ElementRef;
   @ViewChild('drawer') drawer: BottomDrawer;
-  map: GoogleMap;
+  map: any;
   places: Array<{name: string, photo: any}> = [];
   service: any;
+  city: any = {
+    name: '',
+    place: null,
+  };
 
-  constructor(public navCtrl: NavController, private _geoLoc: Geolocation) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController,
+              private _geoLoc: Geolocation) {
   }
 
   ngAfterViewInit() {
     this.initMap();
-
     this._geoLoc.getCurrentPosition().then( position => {
       this.map = new google.maps.Map(this.mapElement.nativeElement, {
         center: {lat: position.coords.latitude, lng: position.coords.longitude},
@@ -48,14 +53,33 @@ export class MapPage {
     });
   }
 
+  changed_city(place: any) {
+    this.places = [];
+    this.service.getDetails(place, (loc, status) => {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        this.map.setCenter(loc.geometry.location);
+        console.log(loc.geometry.location.lat)
+        this.map.setZoom(15);
+
+        this.service.nearbySearch({
+          location: loc.geometry.location,
+          radius: 1000,
+          type: ['restaurant']
+        }, (results,status2) => {
+          if (status2 === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              console.log(results[i].name);
+              this.createMarker(results[i]);
+            }
+          }
+        });
+      }
+    });
+  }
+
   initMap() {
     let element = this.mapElement.nativeElement;
     this.map = GoogleMaps.create(element);
-  }
-
-  onSearch(ev: any) {
-    let val = ev.target.value;
-    console.log(val);
   }
 
   createMarker(place: any) {
@@ -64,7 +88,7 @@ export class MapPage {
       map: this.map,
       position: placeLoc,
     });
-    this.places.push({name: place.name});
+    this.places.push({name: place.name, photo: place.photos[0]});
     var infowindow = new google.maps.InfoWindow();
     var request = { reference: place.reference };
     this.service.getDetails(request, function(details, status) {
@@ -73,11 +97,28 @@ export class MapPage {
           infowindow.setContent("<strong>" + details.name + "</strong> <br />" + details.formatted_address +
                                 "<br /><strong>" + details.rating + "</strong> stars <br />" +
                                 details.formatted_phone_number);
-          infowindow.open(map, this);
+          infowindow.open(this.map, this);
         });
       }
     });
 
+  }
+
+  showModal() {
+        // show modal
+        let modal = this.modalCtrl.create(AutoDropdown);
+        modal.onDidDismiss(data => {
+            console.log('page > modal dismissed > data > ', data);
+            if(data){
+              this.city.name = data.name;
+              // get details
+              var request = {
+                  placeId: data.place_id
+              };
+              this.changed_city(request);
+            }
+        })
+        modal.present();
   }
 
   // RANDOM, NAIVE DISTANCE COMPUTATION!
