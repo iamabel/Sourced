@@ -17,6 +17,7 @@ export class MapPage {
   @ViewChild('drawer') drawer: BottomDrawer;
   map: GoogleMap;
   places: Array<{name: string, photo: any}> = [];
+  service: any;
 
   constructor(public navCtrl: NavController, private _geoLoc: Geolocation) {
   }
@@ -30,8 +31,8 @@ export class MapPage {
         zoom: 15
       });
 
-      var service = new google.maps.places.PlacesService(this.map);
-      service.nearbySearch({
+      this.service = new google.maps.places.PlacesService(this.map);
+      this.service.nearbySearch({
         location: {lat: position.coords.latitude, lng: position.coords.longitude},
         radius: 1000,
         type: ['restaurant']
@@ -63,7 +64,20 @@ export class MapPage {
       map: this.map,
       position: placeLoc,
     });
-    this.places.push({name: place.name, photo: place.photos[0]});
+    this.places.push({name: place.name});
+    var infowindow = new google.maps.InfoWindow();
+    var request = { reference: place.reference };
+    this.service.getDetails(request, function(details, status) {
+      if (details) {
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent("<strong>" + details.name + "</strong> <br />" + details.formatted_address +
+                                "<br /><strong>" + details.rating + "</strong> stars <br />" +
+                                details.formatted_phone_number);
+          infowindow.open(map, this);
+        });
+      }
+    });
+
   }
 
   // RANDOM, NAIVE DISTANCE COMPUTATION!
