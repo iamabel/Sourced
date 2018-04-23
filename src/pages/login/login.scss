@@ -1,3 +1,34 @@
 login-page {
+  html,body {
+    width: 100%;
+    height: 100%;
+  }
+  .toolbar {
+    display: none;
+  }
+}
 
+
+
+#loginpage {
+  height: 100%;
+  width:100%;
+  background-image: url('../assets/imgs/login.jpg');
+  background-position:center;
+  text-align: center;
+  background-size: cover;
+}
+
+#title-login {
+  margin-top: 40%;
+  color: #f2994a;
+  text-shadow: 2px 2px black;
+  font-size: 4em;
+  font-family: 'Bree Serif';
+  font-weight: bold;
+}
+
+.loginbutton{
+  background: #6aa365;
+  margin-top: 5vw;
 }

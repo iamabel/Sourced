@@ -1,17 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h3>Login Page</h3>
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+  </ion-header>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-</ion-content>
+  <ion-content id="loginpage">
+    <div id="overlay">
+      <h3 id="title-login">Sourced</h3>
+      <a id="fb" href="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12">
+        <img src="https://www.studytutorial.in/wp-content/uploads/2017/06/facebook-sign-in-button.png" alt="HTML tutorial" style="width:75%;height:15%;border:0;">
+      </a>
+      <form>
+        <input type="text" placeholder="Username or Email"><br>
+        <input type="password" placeholder="Password"><br>
+      </form>
+      <button class="loginbutton" ion-button [navPush]="chatPage">Login</button>
+      <button class="loginbutton" ion-button [navPush]="mapPage">Create Account</button>
+    </div>
+  </ion-content>
