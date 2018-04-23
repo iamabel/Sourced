@@ -1,17 +1,19 @@
 login-page {
-
+  html,body {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-ion-content{
+
+
+#loginpage {
   background-image: url('../assets/imgs/login.jpg');
-  min-width: 100%;
-  min-height: 100%;
-  background-size: cover;
   text-align: center;
   margin-top: 20%;
 }
 
-h3{
+#title-login {
   color: #f2994a;
   text-shadow: 2px 2px black;
   font-size: 4em;
@@ -19,10 +21,7 @@ h3{
   font-weight: bold;
 }
 
-#create{
+.loginbutton{
   background: #6aa365;
-}
-
-#login{
-  background: #6aa365;
+  margin-top: 5vw;
 }
