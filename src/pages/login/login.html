@@ -9,14 +9,16 @@
   </ion-header>
 
   <ion-content id="loginpage">
-    <h3 id="title-login">Sourced</h3>
-    <a id="fb" href="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12">
-      <img src="https://www.studytutorial.in/wp-content/uploads/2017/06/facebook-sign-in-button.png" alt="HTML tutorial" style="width:75%;height:15%;border:0;">
-    </a>
-    <form>
-      <input type="text" placeholder="Username or Email"><br>
-      <input type="password" placeholder="Password"><br>
-    </form>
-    <button class="loginbutton" ion-button [navPush]="chatPage">Login</button>
-    <button class="loginbutton" ion-button [navPush]="mapPage">Create Account</button>
+    <div id="overlay">
+      <h3 id="title-login">Sourced</h3>
+      <a id="fb" href="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12">
+        <img src="https://www.studytutorial.in/wp-content/uploads/2017/06/facebook-sign-in-button.png" alt="HTML tutorial" style="width:75%;height:15%;border:0;">
+      </a>
+      <form>
+        <input type="text" placeholder="Username or Email"><br>
+        <input type="password" placeholder="Password"><br>
+      </form>
+      <button class="loginbutton" ion-button [navPush]="chatPage">Login</button>
+      <button class="loginbutton" ion-button [navPush]="mapPage">Create Account</button>
+    </div>
   </ion-content>
