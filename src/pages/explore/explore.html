@@ -3,11 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-searchbar
-      [(ngModel)]="myInput"
-      [showCancelButton]="shouldShowCancel"
-      (ionInput)="onSearch($event)">
+    <ion-searchbar  placeholder="Pick a City"
+                (click)="showModal()"
+                [(ngModel)]="city.name">
     </ion-searchbar>
+    <!-- <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel">
+    </ion-searchbar> -->
   </ion-navbar>
 </ion-header>
 

@@ -11,6 +11,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { MapPage } from '../pages/explore/explore';
 
 import { BottomDrawer } from '../components/bottom-drawer/bottom-drawer';
+import {AutoDropdown} from '../components/auto-dropdown/auto-dropdown';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     ChatPage,
     ProfilePage,
     MapPage,
-    BottomDrawer
+    BottomDrawer,
+    AutoDropdown
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     SettingsPage,
     ChatPage,
     ProfilePage,
-    MapPage
+    MapPage,
+    AutoDropdown
   ],
   providers: [
     StatusBar,
