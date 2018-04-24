@@ -38,23 +38,25 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  dark-grey: #424C55,
+  dark-blue: #304457,
+  white: #FFFFFF
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
-
+$menu-ios-background: color($colors, dark-blue);
+$toolbar-ios-button-color: color($colors, dark-grey);
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
-
+$toolbar-md-button-color: color($colors, dark-grey);
+$menu-md-background: color($colors, dark-blue);
 
 // App Windows Variables
 // --------------------------------------------------

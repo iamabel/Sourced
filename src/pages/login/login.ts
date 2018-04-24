@@ -8,10 +8,14 @@ import { MapPage } from '../../pages/explore/explore';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  chatPage = ChatPage;
-  mapPage = MapPage;
   constructor(public navCtrl: NavController) {
 
   }
 
+  navChat(){
+    this.navCtrl.setRoot(ChatPage);
+  }
+  navMap(){
+    this.navCtrl.setRoot(MapPage);
+  }
 }

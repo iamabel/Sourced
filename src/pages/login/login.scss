@@ -8,7 +8,12 @@ login-page {
   }
 }
 
-
+.signin {
+  margin-top: 1em;
+  background-color: white;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+}
 
 #loginpage {
   height: 100%;
@@ -26,6 +31,13 @@ login-page {
   font-size: 4em;
   font-family: 'Bree Serif';
   font-weight: bold;
+}
+
+#buttons {
+  margin-top: 1em;
+  a img {
+    margin-top: 1em;
+  }
 }
 
 .loginbutton{

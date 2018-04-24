@@ -1,24 +1,17 @@
 
-  <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Login</ion-title>
-    </ion-navbar>
-  </ion-header>
-
-  <ion-content id="loginpage">
+<ion-content id="loginpage">
     <div id="overlay">
       <h3 id="title-login">Sourced</h3>
-      <a id="fb" href="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12">
-        <img src="https://www.studytutorial.in/wp-content/uploads/2017/06/facebook-sign-in-button.png" alt="HTML tutorial" style="width:75%;height:15%;border:0;">
-      </a>
       <form>
-        <input type="text" placeholder="Username or Email"><br>
-        <input type="password" placeholder="Password"><br>
+        <input class="signin" type="text" placeholder="Username or Email"><br>
+        <input class="signin" type="password" placeholder="Password"><br>
       </form>
-      <button class="loginbutton" ion-button [navPush]="chatPage">Login</button>
-      <button class="loginbutton" ion-button [navPush]="mapPage">Create Account</button>
+      <div id="buttons">
+        <button class="loginbutton" ion-button (click)="navChat()">Login</button>
+        <button class="loginbutton" ion-button (click)="navMap()">Create Account</button>
+        <a id="fb" href="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12">
+          <img src="https://appon.io/wp-content/uploads/2016/12/fb_login_default.png" alt="HTML tutorial" style="width:75%;height:15%;border:0;">
+        </a>
+      </div>
     </div>
-  </ion-content>
+</ion-content>
