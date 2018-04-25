@@ -22,8 +22,14 @@ export class ManagePage {
     console.log('ionViewDidLoad BurtChatPage');
   }
 
-  action(){
-    document.getElementById("unfollowbutton").innerHTML = "Follow";
-    document.getElementById("unfollowbutton").style.color = "green";
+  action(number){
+    if(document.getElementById("unfollowbutton"+number).innerHTML == "Follow"){
+      document.getElementById("unfollowbutton"+number).innerHTML = "Unfollow";
+      document.getElementById("unfollowbutton"+number).style.backgroundColor = "#6e6969";
+    }
+    else{
+      document.getElementById("unfollowbutton"+number).innerHTML = "Follow";
+      document.getElementById("unfollowbutton"+number).style.backgroundColor = "#6aa365";
+    }
   }
 }

@@ -1,3 +1,58 @@
 manage-page {
 
+.user p{
+
+}
+
+.user {
+  padding-top: 25px;
+  height: 100px;
+  border-bottom: 1px solid black;
+  margin: 0px;
+}
+
+.user-preview{
+  margin: 0;
+  display: inline-block;
+  width: 40%;
+}
+
+.name{
+  //margin: 0;
+  margin-bottom: 10;
+  font-size: 1em;
+}
+
+.user_block{
+  display: block;
+  height: 25px;
+  //text-overflow: ellipsis;
+  //white-space: nowrap;
+  //overflow: hidden;
+  margin: 0px;
+}
+
+.userimg{
+  display: inline-block;
+  width: 18%;
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+}
+
+.button{
+  position: fixed;
+  left: 200;
+  top: 40;
+}
+
+.round {
+  max-width: 50px;
+  border-radius: 45%;
+}
+
+a {
+  color: black;
+  margin: 0px;
+}
 }
