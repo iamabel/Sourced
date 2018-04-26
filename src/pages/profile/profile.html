@@ -10,14 +10,14 @@
 <ion-content padding>
   <ion-card>
     <ion-item>
-      <ion-icon name="create" item-start id="editIcon"></ion-icon>
+      <ion-icon name="create" item-start id="editIcon" (click)="pushPageEditProfile()"></ion-icon>
 
       <img src="assets/imgs/matt_square.png" id="profileimg">
 
       <div id="partners">
       <p id="partnerText"><b>30</b><br>partners</p>
       </div>
-  
+
       <ion-icon name="chatboxes" item-start class="managebutton" (click)="pushPageManage()">7 Partners</ion-icon>
     </ion-item>
 

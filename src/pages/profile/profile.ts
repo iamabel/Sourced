@@ -17,4 +17,8 @@ export class ProfilePage {
   pushPageManage(){
     this.navCtrl.push('ManagePage');
   }
+
+  pushPageEditProfile(){
+    this.navCtrl.push('EditProfilePage');
+  }
 }
