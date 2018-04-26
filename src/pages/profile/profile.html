@@ -3,17 +3,51 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Profile</ion-title>
+    <ion-title>Dan Montana</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Profile Content</h3>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="create" item-start id="editIcon"></ion-icon>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-  <button class="managebutton" ion-button (click)="pushPageManage()">7 Partners</button>
+      <img src="assets/imgs/matt_square.png" id="profileimg">
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+      <div id="partners">
+      <p id="partnerText"><b>30</b><br>partners</p>
+      </div>
+  
+      <ion-icon name="chatboxes" item-start class="managebutton" (click)="pushPageManage()">7 Partners</ion-icon>
+    </ion-item>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <p>
+        Head chef and locavore.
+        <br>I love to shop from small businesses.
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <img src="assets/imgs/matt.png"/>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <p>Syracuse, NY</p>
+    </ion-card-content>
+
+  </ion-card>
+
 </ion-content>
