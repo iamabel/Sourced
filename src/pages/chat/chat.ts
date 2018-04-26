@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
+
 
 
 @Component({
@@ -8,7 +9,7 @@ import { NavController } from 'ionic-angular';
 })
 export class ChatPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
   }
   pushPageJohn(){
@@ -31,6 +32,16 @@ export class ChatPage {
   }
   pushPageTen(){
     this.navCtrl.push('TenChatPage');
+  }
+
+
+  onSearch(){
+    let alert = this.alertCtrl.create({
+      title: 'Function not available',
+      subTitle: 'Please do not use this',
+      buttons: ['Dismiss']
+    });
+    alert.present();
   }
 
 }
