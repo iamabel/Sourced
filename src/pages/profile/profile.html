@@ -7,47 +7,48 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-card>
-    <ion-item>
-      <ion-icon name="create" item-start id="editIcon" (click)="pushPageEditProfile()"></ion-icon>
+      <ion-item>
+        <ion-icon name="create" item-start id="editIcon" (click)="pushPageEditProfile()"></ion-icon>
 
-      <img src="assets/imgs/matt_square.png" id="profileimg">
+        <img src="assets/imgs/matt_square.png" id="profileimg">
 
-      <div id="partners">
-      <p id="partnerText"><b>30</b><br>partners</p>
-      </div>
+        <div id="partners" (click)="pushPageManage()">
+        <p id="partnerText"><b>7</b><br>partners</p>
+        </div>
 
-      <ion-icon name="chatboxes" item-start class="managebutton" (click)="pushPageManage()">7 Partners</ion-icon>
-    </ion-item>
+      </ion-item>
 
-  </ion-card>
+    </ion-card>
 
-  <ion-card>
+    <ion-card>
 
-    <ion-card-content>
-      <p>
-        Head chef and locavore.
-        <br>I love to shop from small businesses.
-      </p>
-    </ion-card-content>
+      <ion-card-content>
+        <p>
+          Head chef and locavore.
+          <br>I love to shop from small businesses.
+        </p>
+      </ion-card-content>
 
-  </ion-card>
+    </ion-card>
 
-  <ion-card>
+    <ion-card>
 
-    <ion-card-content>
-      <img src="assets/imgs/matt.png"/>
-    </ion-card-content>
+      <ion-card-content>
+        <img class= "galleryPic" src="assets/imgs/local.jpg"/>
+        <img class= "galleryPic" src="assets/imgs/steakhouse.jpg"/>
+        <img class= "galleryPic" src="assets/imgs/steak1.jpg"/>
+        <img class= "galleryPic" src="assets/imgs/steak2.jpg"/>
+      </ion-card-content>
 
-  </ion-card>
+    </ion-card>
 
-  <ion-card>
+    <ion-card>
 
-    <ion-card-content>
-      <p>Syracuse, NY</p>
-    </ion-card-content>
+      <ion-card-content>
+        <p class="locationText">Syracuse, NY<br>Owner and head chef at Montana Steakhouse</p>
+      </ion-card-content>
 
-  </ion-card>
-
+    </ion-card>
 </ion-content>
