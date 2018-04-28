@@ -1,8 +1,8 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ManagePage page.
+ * Generated class for the CoffeeProfilePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,29 +10,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'manage-page',
-  templateUrl: 'manage.html',
+  selector: 'page-coffee-profile',
+  templateUrl: 'coffee-profile.html',
 })
-export class ManagePage {
+export class CoffeeProfilePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BurtChatPage');
-  }
-  pushPageJohnny(){
-    this.navCtrl.push('JohnnyProfilePage');
+    console.log('ionViewDidLoad CoffeeProfilePage');
   }
 
   pushPageCoffee(){
-    this.navCtrl.push('CoffeeProfilePage');
+    this.navCtrl.push('CoffeeChatPage');
   }
 
-  pushPageInn(){
-    this.navCtrl.push('ColgateInnProfilePage');
-  }
-  
   action(number){
     if(document.getElementById("unfollowbutton"+number).innerHTML == "Follow"){
       document.getElementById("unfollowbutton"+number).innerHTML = "Unfollow";
@@ -43,4 +36,5 @@ export class ManagePage {
       document.getElementById("unfollowbutton"+number).style.backgroundColor = "#6aa365";
     }
   }
+
 }

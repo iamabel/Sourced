@@ -1,0 +1,61 @@
+<!--
+  Generated template for the CoffeeProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>The Coffee Place</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+      <ion-item>
+        <ion-icon name="chatboxes" item-start id="chatIcon" (click)="pushPageCoffee()"></ion-icon>
+
+        <img src="assets/imgs/coffee_place_square.png" id="profileimg">
+
+
+        <div class="button">
+          <button id="unfollowbutton1" ion-button small color="secondary" (click)="action(1);">Unfollow</button>
+        </div>
+
+      </ion-item>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-content>
+        <p>
+          We are The Coffee Place in downtown Hamilton.
+          <br>We're always looking for new places to source our beans to keep the taste fresh.
+        </p>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-content>
+        <img class= "galleryPic" src="assets/imgs/farm1.jpg"/>
+        <img class= "galleryPic" src="assets/imgs/farm2.jpg"/>
+        <img class= "galleryPic" src="assets/imgs/farm3.jpg"/>
+        <img class= "galleryPic" src="assets/imgs/farm4.jpg"/>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-content>
+        <p class="locationText">Hamilton, NY</p>
+      </ion-card-content>
+
+    </ion-card>
+</ion-content>

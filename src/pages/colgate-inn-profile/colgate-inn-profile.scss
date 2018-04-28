@@ -1,10 +1,10 @@
-profile-page {
+page-colgate-inn-profile {
   #profileimg {
     border-radius: 50%;
     width: 65%;
     height: auto;
     display: inline-block;
-    margin-left: 16%;
+    margin-left: 14%;
   }
   #partners{
     float: right;
@@ -12,8 +12,7 @@ profile-page {
     bottom: 4%;
     right: 5%;
   }
-  #editIcon{
-    color: #f2994a;
+  #chatIcon{
     position: absolute;
     bottom: 0;
     left: 6%;
@@ -31,5 +30,10 @@ profile-page {
   }
   .locationText{
     text-align: center;
+  }
+  .button{
+    position: fixed;
+    right: 5%;
+    top: 40;
   }
 }
