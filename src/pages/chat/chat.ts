@@ -15,11 +15,11 @@ export class ChatPage {
   pushPageJohn(){
     this.navCtrl.push('JohnChatPage');
   }
+  pushPageJohnProf(){
+    this.navCtrl.push('JohnnyProfilePage');
+  }
   pushPageCoffee(){
     this.navCtrl.push('CoffeeChatPage');
-  }
-  pushPageStella(){
-    this.navCtrl.push('StellaChatPage');
   }
   pushPageTim(){
     this.navCtrl.push('TimChatPage');
@@ -32,6 +32,12 @@ export class ChatPage {
   }
   pushPageTen(){
     this.navCtrl.push('TenChatPage');
+  }
+  pushPageInn(){
+    this.navCtrl.push('StellaChatPage');
+  }
+  pushPageInnProf() {
+    this.navCtrl.push('ColgateInnProfilePage');
   }
 
 

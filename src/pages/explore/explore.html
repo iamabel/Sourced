@@ -22,7 +22,7 @@
 
 <bottom-drawer #drawer>
     <div class="content">
-      <button ion-item *ngFor="let place of places">
+      <button ion-item *ngFor="let place of places" (click)="this.navCtrl.push('ColgateInnProfilePage');">
         {{place.name}}
       </button>
     </div>
