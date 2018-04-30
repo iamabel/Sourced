@@ -5,6 +5,7 @@
 </ion-header>
 <ion-content>
     <ion-searchbar
+        #searchbar
         [(ngModel)]="autocomplete.query"
         [showCancelButton]="true"
         (ionInput)="updateSearch()"

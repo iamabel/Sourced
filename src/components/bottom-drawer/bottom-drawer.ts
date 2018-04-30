@@ -29,6 +29,16 @@ export class BottomDrawer {
 
   }
 
+  onSearched() {
+    this.renderer.setElementStyle(this.element.nativeElement, 'top', this.platform.height() - this.handleHeight - (this.platform.height() * .6) + 'px');
+    let hammer = new window['Hammer'](this.element.nativeElement);
+    hammer.get('pan').set({ direction: window['Hammer'].DIRECTION_VERTICAL });
+
+    hammer.on('pan', (ev) => {
+      this.handlePan(ev);
+    });
+  }
+
   handlePan(ev){
 
     let newTop = ev.center.y;

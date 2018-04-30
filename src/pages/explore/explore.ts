@@ -54,6 +54,7 @@ export class MapPage {
   }
 
   changed_city(place: any) {
+    this.drawer.onSearched();
     this.places = [];
     this.service.getDetails(place, (loc, status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -88,7 +89,7 @@ export class MapPage {
       map: this.map,
       position: placeLoc,
     });
-    this.places.push({name: place.name, photo: place.photos[0]});
+    this.places.push({name: place.name, photo: "photo if I could get it"});
     var infowindow = new google.maps.InfoWindow();
     var request = { reference: place.reference };
     this.service.getDetails(request, function(details, status) {
