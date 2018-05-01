@@ -17,6 +17,9 @@
         {{item.note}}
       </div>
     </button>
+    <button ion-button round color="light" (click)="pushPageLogin()" style="border-radius:10px;padding:40px;margin-left:5px;margin-right:5px;margin-top:10px;width:93%;">
+      {{signout[0].title}}
+    </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>

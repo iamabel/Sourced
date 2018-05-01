@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams, IonicPage} from 'ionic-angular';
+@IonicPage()
 @Component({
   selector: 'settings-page',
   templateUrl: 'settings.html'
@@ -10,6 +10,7 @@ export class SettingsPage {
   icons: string[];
   //items: Array<{title: string, note: string, icon: string}>;
   items: Array<{title: string}>;
+  signout: Array<{title: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -48,9 +49,17 @@ export class SettingsPage {
       title: 'Change Password'
     });
 
-    this.items.push({
+    // this.items.push({
+    //   title: 'Sign Out'
+    // });
+
+    this.signout = [];
+
+    this.signout.push({
       title: 'Sign Out'
     });
+
+
 
   }
 
@@ -59,5 +68,9 @@ export class SettingsPage {
     // this.navCtrl.push(SettingsPage, {
     //   item: item
     // });
+  }
+
+  pushPageLogin(){
+    this.navCtrl.push('LoginPage');
   }
 }
