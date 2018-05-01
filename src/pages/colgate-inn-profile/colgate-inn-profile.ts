@@ -22,6 +22,10 @@ export class ColgateInnProfilePage {
     console.log('ionViewDidLoad ColgateInnProfilePage');
   }
 
+  pushPageInn(){
+    this.navCtrl.push('StellaChatPage');
+  }
+
   action(number){
     if(document.getElementById("unfollowbutton"+number).innerHTML == "Follow"){
       document.getElementById("unfollowbutton"+number).innerHTML = "Unfollow";
