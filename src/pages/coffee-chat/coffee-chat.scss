@@ -1,6 +1,3 @@
-page-coffee-chat {
-
-}
 
 page-coffee-chat {
   body {
@@ -61,4 +58,12 @@ page-coffee-chat {
     bottom: 30px;
     width: 103%;
   }
+
+}
+input[type="text"], textarea {
+  background-color : white;
+}
+
+::placeholder {
+  color: grey;
 }

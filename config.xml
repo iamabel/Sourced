@@ -3,7 +3,7 @@
     <name>Sourced</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://149.43.222.203:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -101,4 +101,5 @@
     <allow-navigation href="http://149.43.200.214:8100" />
     <allow-navigation href="http://149.43.222.203:8100" />
     <engine name="ios" spec="4.5.4" />
+    <allow-navigation href="http://149.43.193.67:8100" />
 </widget>
