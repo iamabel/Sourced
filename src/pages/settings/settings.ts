@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../../pages/login/login';
 
 @Component({
   selector: 'settings-page',
@@ -19,7 +20,17 @@ export class SettingsPage {
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     'american-football', 'boat', 'bluetooth', 'build'];
 
-    this.items = [];
+    this.items = [{
+      title: 'General'
+    }, {
+      title: 'Privacy'
+    }, {
+      title: 'Location'
+    }, {
+      title: 'Notifications'
+    }, {
+      title: 'Change Password'
+    }];
     // for (let i = 1; i < 11; i++) {
     //   this.items.push({
     //     title: 'Item ' + i,
@@ -28,30 +39,6 @@ export class SettingsPage {
     //   });
     // }
 
-    this.items.push({
-      title: 'General'
-    });
-
-    this.items.push({
-      title: 'Privacy'
-    });
-
-    this.items.push({
-      title: 'Location'
-    });
-
-    this.items.push({
-      title: 'Notifications'
-    });
-
-    this.items.push({
-      title: 'Change Password'
-    });
-
-    this.items.push({
-      title: 'Sign Out'
-    });
-
   }
 
   itemTapped(event, item) {
@@ -59,5 +46,9 @@ export class SettingsPage {
     // this.navCtrl.push(SettingsPage, {
     //   item: item
     // });
+  }
+
+  goToLogin() {
+    this.navCtrl.setRoot(LoginPage);
   }
 }

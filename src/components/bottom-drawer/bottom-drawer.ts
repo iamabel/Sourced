@@ -9,7 +9,7 @@ export class BottomDrawer {
   handleHeight: number = 75;
   bounceBack: boolean = true;
   thresholdTop: number = 200;
-  thresholdBottom: number = 400;
+  thresholdBottom: number = 200;
 
   constructor(public element: ElementRef, public renderer: Renderer,
               public domCtrl: DomController, public platform: Platform) {
@@ -18,7 +18,7 @@ export class BottomDrawer {
 
   ngAfterViewInit() {
     this.renderer.setElementStyle(this.element.nativeElement, 'top', this.platform.height() - this.handleHeight + 'px');
-    this.renderer.setElementStyle(this.element.nativeElement, 'padding-top', this.handleHeight + 'px');
+    this.renderer.setElementStyle(this.element.nativeElement, 'padding-top', this.handleHeight*.5 + 'px');
 
     let hammer = new window['Hammer'](this.element.nativeElement);
     hammer.get('pan').set({ direction: window['Hammer'].DIRECTION_VERTICAL });
